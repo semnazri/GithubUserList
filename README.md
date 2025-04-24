@@ -33,6 +33,7 @@ An Android app built with Jetpack Compose and Material 3 that allows users to se
 ---
 
 ## How to Run
+> Developed using Android Studio Merkat (2025.1.1 Canary), recommended to use Hedgehog or newer.
 
 1. Clone this repo:
    ```bash
