@@ -45,7 +45,7 @@ An Android app built with Jetpack Compose and Material 3 that allows users to se
 
 ## Project Highlights
 
-Initialized Koin D.I — Easy, clean dependency injection.
-ViewModel Setup — ViewModel ready with clean event/state management.
-UI Assembled — Composable screens modularized for scalability.
-Enhanced Folder Structure — Feature-based modularization for better maintenance.
+- Initialized Koin D.I — Easy, clean dependency injection.
+- ViewModel Setup — ViewModel ready with clean event/state management.
+- UI Assembled — Composable screens modularized for scalability.
+- Enhanced Folder Structure — Feature-based modularization for better maintenance.
