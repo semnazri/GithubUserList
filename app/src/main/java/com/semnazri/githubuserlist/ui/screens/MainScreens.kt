@@ -45,11 +45,15 @@ fun MainScreen(navController: NavController) {
                 .padding(padding)
         ) {
             MySearchBar(
+                hint = "Search User",
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp, vertical = 8.dp),
                 onSearch = {
-                    // TODO: Implement Search
+                    viewModel.onEvent(UserListEvent.Search(it))
+                },
+                onClear = {
+                    viewModel.onEvent(UserListEvent.ClearSearch)
                 }
             )
 
