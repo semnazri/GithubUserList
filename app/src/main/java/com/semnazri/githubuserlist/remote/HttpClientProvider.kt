@@ -1,4 +1,4 @@
-package com.semnazri.githubuserlist.data.remote
+package com.semnazri.githubuserlist.remote
 
 import com.semnazri.githubuserlist.BuildConfig
 import io.ktor.client.HttpClient

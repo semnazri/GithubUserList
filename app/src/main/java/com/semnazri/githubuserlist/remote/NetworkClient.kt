@@ -1,4 +1,4 @@
-package com.semnazri.githubuserlist.data.remote
+package com.semnazri.githubuserlist.remote
 
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.okhttp.OkHttp
@@ -11,9 +11,9 @@ import okhttp3.logging.HttpLoggingInterceptor
 
 object HttpClientProvider {
 
-    // Set your global headers here
     private val commonHeaders = mapOf(
-        "Authorization" to "Bearer your key belongs here",
+        "Accept" to "application/vnd.github+json",
+        "Authorization" to "Bearer <YOUR TOKEN HERE>",
     )
 
     val client: HttpClient by lazy {

@@ -1,4 +1,4 @@
-package com.semnazri.githubuserlist.data.remote
+package com.semnazri.githubuserlist.remote
 
 interface Endpoint {
     val path: String

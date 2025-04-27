@@ -48,6 +48,9 @@ android {
 
 dependencies {
     implementation(project(":core-ui"))
+    implementation (libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.koin.android)
+    implementation(libs.koin.androidx.compose)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlin.stdlib)
     implementation(libs.ktor.client.core)
