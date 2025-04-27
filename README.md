@@ -33,8 +33,19 @@ An Android app built with Jetpack Compose and Material 3 that allows users to se
 ---
 
 ## How to Run
-> Developed using Android Studio Merkat (2025.1.1 Canary), recommended to use Hedgehog or newer.
 
 1. Clone this repo:
    ```bash
    git clone https://github.com/your-username/github-user-viewer.git
+
+2. Open with Android Studio Hedgehog or newer
+   (Built with Android Studio Merkat 2025.1.1 Canary)
+
+3. Run the project on an emulator or device running Android 8.0 (API 26) or higher.
+
+## Project Highlights
+
+Initialized Koin D.I — Easy, clean dependency injection.
+ViewModel Setup — ViewModel ready with clean event/state management.
+UI Assembled — Composable screens modularized for scalability.
+Enhanced Folder Structure — Feature-based modularization for better maintenance.
