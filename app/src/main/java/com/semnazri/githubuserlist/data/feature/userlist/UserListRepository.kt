@@ -1,4 +1,4 @@
-package com.semnazri.githubuserlist.data.feature
+package com.semnazri.githubuserlist.data.feature.userlist
 
 import com.semnazri.githubuserlist.data.model.userlist.UserList
 import com.semnazri.githubuserlist.data.model.usersearch.UserSearch

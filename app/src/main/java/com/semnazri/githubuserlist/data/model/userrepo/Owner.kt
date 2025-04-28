@@ -31,7 +31,7 @@ data class Owner(
     @SerialName("received_events_url")
     val receivedEventsUrl: String,
     @SerialName("repos_url")
-    val reposUrl: String,
+    val reposUrl: String? = "",
     @SerialName("site_admin")
     val siteAdmin: Boolean,
     @SerialName("starred_url")

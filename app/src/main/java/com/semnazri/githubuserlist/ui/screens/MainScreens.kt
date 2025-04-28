@@ -22,9 +22,9 @@ import com.semnazri.core_ui.molecules.MyErrorComponent
 import com.semnazri.core_ui.molecules.MyLoading
 import com.semnazri.core_ui.molecules.MySearchBar
 import com.semnazri.core_ui.molecules.MyUserCardItem
-import com.semnazri.githubuserlist.data.feature.UserListEvent
-import com.semnazri.githubuserlist.data.feature.UserListState
-import com.semnazri.githubuserlist.data.feature.UserListViewModel
+import com.semnazri.githubuserlist.data.feature.userlist.UserListEvent
+import com.semnazri.githubuserlist.data.feature.userlist.UserListState
+import com.semnazri.githubuserlist.data.feature.userlist.UserListViewModel
 import com.semnazri.githubuserlist.data.model.userlist.UserList
 import com.semnazri.githubuserlist.ui.navigation.Screens
 import org.koin.androidx.compose.koinViewModel
@@ -33,6 +33,7 @@ import org.koin.androidx.compose.koinViewModel
 fun MainScreen(navController: NavController) {
     val viewModel: UserListViewModel = koinViewModel()
     val uiState = viewModel.uiState.collectAsStateWithLifecycle().value
+    val searchQuery = viewModel.searchQuery.collectAsStateWithLifecycle().value
 
     LaunchedEffect(Unit) {
         viewModel.onEvent(UserListEvent.LoadData)
@@ -46,6 +47,7 @@ fun MainScreen(navController: NavController) {
         ) {
             MySearchBar(
                 hint = "Search User",
+                initialValue = searchQuery,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp, vertical = 8.dp),
@@ -103,7 +105,7 @@ fun UserListContent(
     ) {
         items(users) { user ->
             MyUserCardItem(
-                onClick = { null}, //TODO : implement Navigate to Detail User
+                onClick = {onUserClick(user.login)},
                 username = user.login,
                 avatarUrl = user.avatarUrl,
                 modifier = Modifier.fillMaxWidth()

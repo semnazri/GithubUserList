@@ -10,7 +10,11 @@ class MyApplication : Application() {
 
         startKoin {
             androidContext(this@MyApplication)
-            modules(appModule)
+            modules(
+                networkModule,
+                repositoryModule,
+                viewModelModule
+            )
         }
     }
 }

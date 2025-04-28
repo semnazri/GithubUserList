@@ -13,11 +13,13 @@ object UserEndpoints {
         override val path = "/search/users"
     }
 
-    object GetDetailUser {
-        fun userName(name : String)  = "/search/users/$name"
+    data class GetDetailUser(val username: String) : Endpoint {
+        override val path: String
+            get() = "/users/$username"
     }
 
-    object GetDetailRepoUser {
-        fun userName(name : String)  = "/search/users/$name/repos"
+    data class GetDetailRepoUser(val username: String) : Endpoint {
+        override val path: String
+            get() = "/users/$username/repos"
     }
 }

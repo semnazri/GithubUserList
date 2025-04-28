@@ -1,5 +1,6 @@
 package com.semnazri.core_ui.molecules
 
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -7,6 +8,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.CheckCircle
@@ -34,11 +36,19 @@ fun MyRepositoryItem(
         modifier = Modifier
             .fillMaxWidth()
             .clickable(onClick = onClick)
-            .padding(16.dp),
-        color = MaterialTheme.colorScheme.surface
+            .padding(8.dp)
+            .border(
+                width = 1.dp,
+                color = MaterialTheme.colorScheme.outline,
+                shape = RoundedCornerShape(8.dp)
+            ),
+        color = MaterialTheme.colorScheme.surface,
+        shape = RoundedCornerShape(8.dp)
     ) {
         Column(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp)
         ) {
             // Repository name
             Text(
@@ -47,7 +57,7 @@ fun MyRepositoryItem(
                 fontWeight = FontWeight.Bold
             )
 
-            // Description if available
+            // Description
             if (!description.isNullOrEmpty()) {
                 Text(
                     text = description,
@@ -59,12 +69,11 @@ fun MyRepositoryItem(
                 )
             }
 
-            // Language and stars info
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(top = 8.dp)
             ) {
-                // Language with colored circle
+                // Language
                 if (!language.isNullOrEmpty()) {
                     Icon(
                         imageVector = Icons.Outlined.CheckCircle,
@@ -79,7 +88,7 @@ fun MyRepositoryItem(
                     Spacer(modifier = Modifier.width(16.dp))
                 }
 
-                // Stars count
+                // Stars
                 Icon(
                     imageVector = Icons.Filled.Star,
                     contentDescription = "Stars",
