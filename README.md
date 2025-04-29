@@ -41,7 +41,7 @@ An Android app built with Jetpack Compose and Material 3 that allows users to se
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/github-user-viewer.git
+   https://github.com/semnazri/GithubUserList.git
 2. Open with Android Studio Hedgehog or newer (Developed with Android Studio Merkat 2025.1.1 Canary).
 3. Run the project on an emulator or device running Android 8.0 (API 26) or higher.
 
